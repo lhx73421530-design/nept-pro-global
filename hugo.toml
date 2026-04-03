@@ -1,0 +1,12 @@
+baseURL = 'https://pro.cnnept.com/'
+languageCode = 'en-us'
+title = 'CNNEPT PRO | Industrial Excellence'
+theme = []
+
+# 定义产品数据存放位置
+[content]
+  publishDir = 'public'
+
+# 允许后台生成的内容
+[mediaTypes."text/markdown"]
+  suffixes = ["md"]
