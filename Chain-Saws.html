@@ -53,13 +53,14 @@
 
             <!-- 3. Power Tools -->
             <li>
-                <a href="Power-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
-                    <i class="fas fa-bolt mr-2"></i> Power Tools
-                </a>
-                <ul class="pl-4 space-y-3 border-l border-zinc-800 text-[11px] font-bold text-zinc-500 uppercase">
-                    <li><a href="Power-Tools.html" class="hover:text-white transition block">Lithium-Ion Series</a></li>
-                </ul>
-            </li>
+    <a href="Power-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
+        <i class="fas fa-bolt mr-2"></i> Power Tools
+    </a>
+    <ul class="pl-4 space-y-3 border-l border-zinc-800 text-[11px] font-bold text-zinc-500 uppercase">
+        <!-- 核心：确保这里指向刚才新建的文件 -->
+        <li><a href="Lithium-Ion-Series.html" class="hover:text-white transition block">Lithium-Ion Series</a></li>
+    </ul>
+</li>
         </ul>
 
         <!-- 侧边栏底部的快捷询盘，增加信任感 -->
@@ -74,14 +75,19 @@
 <!-- 统一侧边栏结束 -->
 
         <!-- 3. 右侧内容 (显示暂无商品) -->
-        <main class="flex-grow text-center py-20">
-            <h1 class="text-3xl font-black uppercase italic mb-6 border-l-4 border-blue-500 pl-4 text-left">Chain Saws</h1>
-            <div class="bg-zinc-900/30 border border-zinc-800 p-20 rounded-2xl">
-                <i class="fas fa-tools text-4xl text-zinc-800 mb-6"></i>
-                <p class="text-zinc-600 italic tracking-widest uppercase text-xs">High-efficiency floor scrubbers are being updated. <br>Please contact us for early catalog.</p>
-                <a href="https://wa.me/8613561675079" class="inline-block mt-8 border border-zinc-700 px-8 py-2 text-[9px] hover:bg-white hover:text-black transition">Get PDF Catalog</a>
-            </div>
-        </main>
+        <main class="flex-grow">
+    <h1 class="text-3xl font-black uppercase italic mb-8 border-l-4 border-green-600 pl-4">Chain Saws</h1>
+    <div class="bg-zinc-900/30 border border-zinc-800 p-20 rounded-2xl text-center">
+        <i class="fas fa-tree text-4xl text-zinc-800 mb-6"></i>
+        <p class="text-zinc-400 italic tracking-widest uppercase text-[11px] leading-loose">
+            Our <span class="text-white">Chain Saws</span> collection is currently being updated with the latest high-torque models.<br>
+            Please contact us for an early catalog and wholesale pricing.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-4 mt-10">
+            <a href="https://wa.me/8613561675079" class="bg-white text-black px-8 py-3 text-[10px] font-black uppercase rounded hover:bg-orange-600 hover:text-white transition">Request Catalog</a>
+        </div>
+    </div>
+</main>
     </div>
 </body>
 </html>
