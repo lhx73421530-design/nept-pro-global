@@ -21,26 +21,57 @@
 
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
         <!-- 2. 侧边栏 (永不消失) -->
-        <aside class="w-full lg:w-72 flex-shrink-0">
-            <div class="sticky top-32 bg-zinc-900/50 p-8 border border-zinc-800 rounded-xl text-[10px] font-bold uppercase">
-                <h3 class="text-orange-500 mb-8 tracking-widest italic">Equipment Menu</h3>
-                <ul class="space-y-6">
-                    <li><span class="text-white block mb-3">Cleaning Tools</span>
-                        <ul class="pl-4 space-y-3 border-l border-orange-600/30">
-                            <li><a href="Sweepers.html" class="hover:text-white transition">Ride-on Sweepers</a></li>
-                            <li><a href="Scrubbers.html" class="text-orange-500">Floor Scrubbers</a></li>
-                        </ul>
-                    </li>
-                    <li><span class="text-white block mb-3">Garden Tools</span>
-                        <ul class="pl-4 space-y-3 border-l border-orange-600/30">
-                            <li><a href="RC-Mowers.html" class="hover:text-white transition">RC Mowers</a></li>
-                            <li><a href="Brush-Cutters.html" class="hover:text-white transition">Brush Cutters</a></li>
-                            <li><a href="Chain-Saws.html" class="hover:text-white transition">Chain Saws</a></li>
-                        </ul>
-                    </li>
+<!-- 统一侧边栏开始 -->
+<aside class="w-full lg:w-72 flex-shrink-0">
+    <div class="sticky top-32 bg-zinc-900/50 p-8 border border-zinc-800 rounded-xl">
+        <h3 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-8 italic border-b border-orange-600/20 pb-4">
+            Equipment Menu
+        </h3>
+        <ul class="space-y-8">
+            <!-- 1. Cleaning Tools -->
+            <li>
+                <a href="Cleaning-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
+                    <i class="fas fa-broom mr-2"></i> Cleaning Tools
+                </a>
+                <ul class="pl-4 space-y-3 border-l border-zinc-800 text-[11px] font-bold text-zinc-500 uppercase">
+                    <li><a href="Sweepers.html" class="hover:text-white transition block">Ride-on Sweepers</a></li>
+                    <li><a href="Scrubbers.html" class="hover:text-white transition block">Floor Scrubbers</a></li>
                 </ul>
-            </div>
-        </aside>
+            </li>
+
+            <!-- 2. Garden Tools -->
+            <li>
+                <a href="Garden-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
+                    <i class="fas fa-leaf mr-2"></i> Garden Tools
+                </a>
+                <ul class="pl-4 space-y-3 border-l border-zinc-800 text-[11px] font-bold text-zinc-500 uppercase">
+                    <li><a href="RC-Mowers.html" class="hover:text-white transition block">RC Mowers</a></li>
+                    <li><a href="Brush-Cutters.html" class="hover:text-white transition block">Brush Cutters</a></li>
+                    <li><a href="Chain-Saws.html" class="hover:text-white transition block">Chain Saws</a></li>
+                </ul>
+            </li>
+
+            <!-- 3. Power Tools -->
+            <li>
+                <a href="Power-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
+                    <i class="fas fa-bolt mr-2"></i> Power Tools
+                </a>
+                <ul class="pl-4 space-y-3 border-l border-zinc-800 text-[11px] font-bold text-zinc-500 uppercase">
+                    <li><a href="Power-Tools.html" class="hover:text-white transition block">Lithium-Ion Series</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- 侧边栏底部的快捷询盘，增加信任感 -->
+        <div class="mt-10 pt-8 border-t border-zinc-800">
+            <p class="text-[9px] text-zinc-600 uppercase mb-4 tracking-widest">Direct Support</p>
+            <a href="https://wa.me/8613561675079" class="flex items-center text-zinc-400 hover:text-green-500 transition text-[10px]">
+                <i class="fab fa-whatsapp mr-2 text-sm"></i> +86 135 6167 5079
+            </a>
+        </div>
+    </div>
+</aside>
+<!-- 统一侧边栏结束 -->
 
         <!-- 3. 右侧内容 (显示暂无商品) -->
         <main class="flex-grow text-center py-20">
