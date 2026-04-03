@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giant 2200 Sweeper | Pro-Spec Fleet | CNNEPT PRO</title>
+    <title>Giant 2200 Industrial Sweeper | Heavy-Duty Specs | CNNEPT PRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; } .tech-row { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px 0; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; }
+        .tech-row { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 14px 0; display: flex; justify-content: space-between; align-items: center; }
+        .tech-label { color: #888; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; font-weight: 700; }
+        .tech-value { color: #fff; font-weight: 900; font-style: italic; font-size: 11px; }
+        .spec-card { background: rgba(20,20,20,0.8); border: 1px solid rgba(255,255,255,0.05); padding: 30px; rounded-radius: 20px; }
+    </style>
 </head>
 <body class="pt-24">
-    <!-- 导航栏同上 -->
+
+    <!-- 1. 统一导航栏 -->
     <nav class="fixed top-0 w-full z-[100] bg-[#0a0a0a] border-b border-orange-600/50 px-6 md:px-10 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-3"><img src="images/logo.png" class="h-9 w-auto" onerror="this.style.display='none'"><div class="text-xl font-black tracking-[0.3em] uppercase text-white">CNNEPT <span class="font-light text-orange-500">PRO</span></div></div>
+        <div class="flex items-center space-x-3">
+            <img src="images/logo.png" class="h-9 w-auto" onerror="this.style.display='none'">
+            <div class="text-xl font-black tracking-[0.3em] uppercase text-white">CNNEPT <span class="font-light text-orange-500">PRO</span></div>
+        </div>
         <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-zinc-300">
             <a href="index.html" class="hover:text-white transition">Home</a>
             <a href="About.html" class="hover:text-white transition">Company</a>
@@ -21,10 +31,10 @@
     </nav>
 
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
-        <!-- 侧边栏保持同步 -->
+        <!-- 2. 侧边栏 -->
         <aside class="w-full lg:w-72 flex-shrink-0">
             <div class="sticky top-32 bg-zinc-900/50 p-8 border border-zinc-800 rounded-xl text-[10px] font-bold uppercase">
-                <h3 class="text-orange-500 mb-8 tracking-widest italic">Equipment Menu</h3>
+                <h3 class="text-orange-500 mb-8 tracking-widest italic border-b border-orange-600/20 pb-4">Equipment Menu</h3>
                 <ul class="space-y-6">
                     <li><span class="text-white block mb-3">Cleaning Tools</span>
                         <ul class="pl-4 space-y-3 border-l border-orange-600/30">
@@ -41,13 +51,15 @@
             </div>
         </aside>
 
-        <!-- 主体 -->
+        <!-- 3. 产品内容主体 -->
         <main class="flex-grow">
-            <div class="grid lg:grid-cols-2 gap-12">
+            <!-- 头部及视觉区域 -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
                 <div class="space-y-4">
-                    <div class="bg-zinc-950 rounded-2xl overflow-hidden border border-white/5 cursor-zoom-in relative" onclick="openLightbox()">
-                        <img id="mainDisplay" src="images/sweepers/sweeper-1.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="bg-zinc-950 rounded-3xl overflow-hidden border border-white/5 cursor-zoom-in relative" onclick="openLightbox()">
+                        <img id="mainDisplay" src="images/sweepers/sweeper-1.jpg" class="w-full h-full object-cover transition duration-700 hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1621905235277-24846467026a?q=80&w=800'">
                     </div>
+                    <!-- 4张图片矩阵 -->
                     <div class="grid grid-cols-4 gap-2">
                         <img src="images/sweepers/sweeper-1.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
                         <img src="images/sweepers/sweeper-2.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
@@ -55,50 +67,96 @@
                         <img src="images/sweepers/sweeper-4.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
                     </div>
                 </div>
-                <div class="flex flex-col">
-                    <h1 class="text-5xl font-black uppercase italic tracking-tighter mb-4 italic">Giant <span class="text-orange-500">2200</span></h1>
-                    <p class="text-zinc-500 text-[10px] uppercase font-bold mb-8 italic">The Ultimate Industrial Sweeping Force</p>
-                    <div class="space-y-2 mb-10 text-[11px] uppercase italic">
-                        <div class="flex justify-between tech-row"><span>Efficiency</span><span class="text-white font-black">17,000 m²/h</span></div>
-                        <div class="flex justify-between tech-row"><span>Sweeping Width</span><span class="text-white font-black">1500-2200mm</span></div>
-                        <div class="flex justify-between tech-row"><span>Water Tank</span><span class="text-white font-black">300L Capacity</span></div>
+
+                <div class="flex flex-col justify-center">
+                    <div class="h-1 w-20 bg-orange-600 mb-6"></div>
+                    <h1 class="text-6xl font-black uppercase italic tracking-tighter mb-4 leading-none">Giant <span class="text-orange-500">2200</span></h1>
+                    <p class="text-zinc-500 text-xs uppercase font-black tracking-[0.4em] mb-10 italic">Industrial Elite Cleaning Fleet</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-12">
+                        <div class="bg-zinc-900/80 p-5 border-l-4 border-blue-500 rounded-r-xl">
+                            <span class="block text-2xl font-black italic">17,000</span>
+                            <span class="text-[8px] text-zinc-500 uppercase tracking-widest">m²/h efficiency</span>
+                        </div>
+                        <div class="bg-zinc-900/80 p-5 border-l-4 border-blue-500 rounded-r-xl">
+                            <span class="block text-2xl font-black italic">2200mm</span>
+                            <span class="text-[8px] text-zinc-500 uppercase tracking-widest">cleaning path</span>
+                        </div>
                     </div>
-                    <a href="https://wa.me/8613561675079" class="bg-white text-black py-4 text-center font-black uppercase text-[11px] rounded-full hover:bg-orange-600 hover:text-white transition">Get B2B Pricing</a>
+
+                    <a href="https://wa.me/8613561675079?text=Inquiry for Giant 2200 Sweeper Price" class="bg-white text-black py-5 text-center font-black uppercase text-[11px] tracking-widest rounded-full hover:bg-orange-600 hover:text-white transition-all shadow-2xl">Get Factory Pricing</a>
                 </div>
             </div>
 
-            <!-- 参数大表 -->
-            <div class="mt-16 border-t border-white/10 pt-10">
-                <h2 class="text-xl font-black uppercase italic mb-8">Full Product Matrix</h2>
-                <div class="grid md:grid-cols-2 gap-x-20 text-[10px] uppercase tracking-wide font-bold italic">
-                    <div>
-                        <h4 class="text-orange-500 mb-4 tracking-widest">Dimensions & Power</h4>
-                        <div class="tech-row flex justify-between"><span>Size</span><span class="text-white">3200*2200*2750mm</span></div>
-                        <div class="tech-row flex justify-between"><span>Weight</span><span class="text-white">1150Kg</span></div>
-                        <div class="tech-row flex justify-between"><span>Battery</span><span class="text-white">48V 150Ah * 6</span></div>
-                        <div class="tech-row flex justify-between"><span>Tires</span><span class="text-white">400-08*4 Solid Rubber</span></div>
-                        <div class="tech-row flex justify-between text-blue-400"><span>Drive Power</span><span>3.0 KW</span></div>
+            <!-- 参数大网格：完整参数载入 -->
+            <div class="grid md:grid-cols-2 gap-8 mt-20">
+                <!-- 维度与动力规格 -->
+                <div class="spec-card">
+                    <h3 class="text-orange-500 font-black text-xs uppercase mb-6 tracking-widest border-b border-orange-600/20 pb-4">Dimensions & Power</h3>
+                    <div class="space-y-1">
+                        <div class="tech-row"><span class="tech-label">Overall Size</span><span class="tech-value">3200*2200*2750 mm</span></div>
+                        <div class="tech-row"><span class="tech-label">Gross Weight</span><span class="tech-value">1150 Kg</span></div>
+                        <div class="tech-row"><span class="tech-label">Battery System</span><span class="tech-value">48V 150Ah * 6 Units</span></div>
+                        <div class="tech-row"><span class="tech-label">Drive Motor Power</span><span class="tech-value">3.0 KW</span></div>
+                        <div class="tech-row"><span class="tech-label">Runtime / Endurance</span><span class="tech-value">5 - 8 Hours</span></div>
+                        <div class="tech-row"><span class="tech-label">Tire Type</span><span class="tech-value">400-08*4 Solid Rubber</span></div>
                     </div>
-                    <div>
-                        <h4 class="text-orange-500 mb-4 tracking-widest">Motor & Cleaning System</h4>
-                        <div class="tech-row flex justify-between"><span>Main Brush</span><span class="text-white">1000W</span></div>
-                        <div class="tech-row flex justify-between"><span>Side Brushes</span><span class="text-white">150W * 4</span></div>
-                        <div class="tech-row flex justify-between"><span>Vibration/Vacuum</span><span class="text-white">200W*4 / 500W*4</span></div>
-                        <div class="tech-row flex justify-between"><span>Braking</span><span class="text-white">Hydraulic Disc + E-Brake</span></div>
-                        <div class="tech-row flex justify-between text-red-500"><span>Safety Gear</span><span>3X 8KG Fire Extinguishers</span></div>
-                        <div class="tech-row flex justify-between text-blue-400"><span>Rear Monitoring</span><span>7.2" HD Screen + CAM</span></div>
+                </div>
+
+                <!-- 清洁系统规格 -->
+                <div class="spec-card">
+                    <h3 class="text-orange-500 font-black text-xs uppercase mb-6 tracking-widest border-b border-orange-600/20 pb-4">Cleaning Infrastructure</h3>
+                    <div class="space-y-1">
+                        <div class="tech-row"><span class="tech-label">Water Tank Capacity</span><span class="tech-value">300 L</span></div>
+                        <div class="tech-row"><span class="tech-label">Waste Bin Capacity</span><span class="tech-value">240 L</span></div>
+                        <div class="tech-row"><span class="tech-label">Main Brush Power</span><span class="tech-value">1000 W</span></div>
+                        <div class="tech-row"><span class="tech-label">Side Brushes</span><span class="tech-value">150W * 4 Motors</span></div>
+                        <div class="tech-row"><span class="tech-label">Vibration System</span><span class="tech-value">200W * 4 Motors</span></div>
+                        <div class="tech-row"><span class="tech-label">Vacuum Suction</span><span class="tech-value">500W * 4 Motors</span></div>
+                    </div>
+                </div>
+
+                <!-- 进阶系统与安全 -->
+                <div class="spec-card">
+                    <h3 class="text-blue-500 font-black text-xs uppercase mb-6 tracking-widest border-b border-blue-600/20 pb-4">Control & Hydraulics</h3>
+                    <div class="space-y-1">
+                        <div class="tech-row"><span class="tech-label">High-Pressure Pump</span><span class="tech-value">1.5 KW</span></div>
+                        <div class="tech-row"><span class="tech-label">Braking System</span><span class="tech-value">Dual Hydraulic Disc + Smart E-Brake</span></div>
+                        <div class="tech-row"><span class="tech-label">Steering</span><span class="tech-value">Precision Mechanical Assist</span></div>
+                    </div>
+                </div>
+
+                <!-- 战术安全配置 -->
+                <div class="spec-card border-red-900/30 bg-red-900/5">
+                    <h3 class="text-red-500 font-black text-xs uppercase mb-6 tracking-widest border-b border-red-600/20 pb-4">Safety & Monitoring</h3>
+                    <div class="space-y-1">
+                        <div class="tech-row"><span class="tech-label">Fire Suppression</span><span class="tech-value text-red-500">3X 8KG Industrial Extinguishers</span></div>
+                        <div class="tech-row"><span class="tech-label">Visual Assist</span><span class="tech-value">7.2" HD Monitor</span></div>
+                        <div class="tech-row"><span class="tech-label">Reverse Safety</span><span class="tech-value">HD Rear View Camera</span></div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')">
-        <img id="lbImg" src="" class="max-w-full max-h-full object-contain">
+    <!-- 4. 全屏放大 Lightbox 功能 -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden'); document.body.style.overflow='auto';">
+        <img id="lbImg" src="" class="max-w-full max-h-full object-contain shadow-2xl">
+        <div class="absolute top-8 right-8 text-white text-4xl font-light cursor-pointer">&times;</div>
     </div>
+
     <script>
-        function swap(s){ document.getElementById('mainDisplay').src = s; }
-        function openLightbox(){ document.getElementById('lbImg').src = document.getElementById('mainDisplay').src; document.getElementById('lightbox').classList.remove('hidden'); }
+        // 切换大图
+        function swap(s){ 
+            document.getElementById('mainDisplay').src = s; 
+        }
+        // 开启全屏
+        function openLightbox(){ 
+            const currentSrc = document.getElementById('mainDisplay').src;
+            document.getElementById('lbImg').src = currentSrc;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        }
     </script>
 </body>
 </html>
