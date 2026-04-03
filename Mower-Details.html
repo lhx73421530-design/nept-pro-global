@@ -2,94 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RC Master Hybrid | Industrial Mower | NEPT PRO</title>
+    <title>RC Master Hybrid Mower | Technical Specs | CNNEPT PRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; }
-        .spec-border { border-left: 2px solid #fff; padding-left: 20px; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; } .tech-row { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px 0; }</style>
 </head>
-<body>
-    <!-- 返回导航 -->
-    <!-- 工业标准级导航栏 -->
-<nav class="fixed top-0 w-full z-[100] bg-[#0a0a0a] border-b border-orange-600/50 px-6 md:px-10 py-4 flex justify-between items-center">
-    <!-- 左侧：图标 + 品牌名 -->
-    <div class="flex items-center space-x-3 min-w-[200px]">
-        <img src="images/logo.png" alt="CNNEPT Logo" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
-        <div class="text-xl font-black tracking-[0.3em] uppercase text-white">CNNEPT <span class="font-light text-orange-500">PRO</span></div>
-    </div>
+<body class="pt-24">
 
-    <!-- 中间：主菜单 -->
-    <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-zinc-300">
-        <a href="index.html" class="hover:text-white transition">Home</a>
-        <a href="About.html" class="hover:text-white transition">Company</a>
-        
-        <!-- 产品下拉 -->
-        <div class="relative group">
-            <a href="Global-Catalog.html" class="flex items-center hover:text-orange-500 transition py-2">
-                Products <i class="fas fa-chevron-down ml-2 text-[8px]"></i>
-            </a>
-            <!-- 下拉内容：点击大类进入汇总页 -->
-            <div class="absolute left-0 top-full mt-0 w-64 bg-zinc-900 border border-zinc-800 shadow-2xl hidden group-hover:block transition-all">
-                <a href="Cleaning-Tools.html" class="block px-6 py-4 hover:bg-orange-600 transition border-b border-zinc-800">
-                    <span class="block text-white">CLEANING TOOLS</span>
-                    <span class="text-[8px] opacity-50">Sweepers & Scrubbers</span>
-                </a>
-                <a href="Garden-Tools.html" class="block px-6 py-4 hover:bg-orange-600 transition border-b border-zinc-800">
-                    <span class="block text-white">GARDEN TOOLS</span>
-                    <span class="text-[8px] opacity-50">Mowers, Cutters, Saws</span>
-                </a>
-                <a href="Power-Tools.html" class="block px-6 py-4 hover:bg-orange-600 transition">
-                    <span class="block text-white">POWER TOOLS</span>
-                    <span class="text-[8px] opacity-50">Lithium-Ion Series</span>
-                </a>
-            </div>
+    <!-- 统一导航栏 (保持全站一致) -->
+    <nav class="fixed top-0 w-full z-[100] bg-[#0a0a0a] border-b border-orange-600/50 px-6 md:px-10 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="images/logo.png" alt="Logo" class="h-9 w-auto" onerror="this.style.display='none'">
+            <div class="text-xl font-black tracking-[0.3em] uppercase text-white">CNNEPT <span class="font-light text-orange-500">PRO</span></div>
         </div>
-    </div>
-
-    <!-- 右侧：询盘按钮 -->
-    <a href="https://wa.me/8613561675079" class="bg-orange-600 text-white text-[10px] font-black uppercase px-6 py-2 rounded hover:bg-white hover:text-black transition italic">B2B INQUIRY</a>
-</nav>
-
-    <main class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row gap-12">
-    
-    <!-- 左侧：产品类目侧边栏 -->
-    <aside class="w-full lg:w-64 flex-shrink-0 order-2 lg:order-1">
-        <div class="sticky top-32 space-y-8 bg-zinc-950 p-6 border border-white/5 rounded-2xl">
-            <!-- 清洁工具 -->
-            <div>
-                <h4 class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-4">Cleaning Tools</h4>
-                <ul class="space-y-3 text-[11px] text-zinc-500 uppercase font-bold">
-                    <li><a href="Sweeper-Details.html" class="hover:text-white transition">Industrial Sweepers</a></li>
-                    <li><a href="#" class="hover:text-white transition">Floor Scrubbers</a></li>
-                </ul>
-            </div>
-            <!-- 园林工具 -->
-            <div>
-                <h4 class="text-[10px] font-black text-green-500 uppercase tracking-widest mb-4">Garden Tools</h4>
-                <ul class="space-y-3 text-[11px] text-white uppercase font-bold">
-                    <li><a href="Mower-Details.html" class="text-white italic">RC Master Mower</a></li>
-                    <li><a href="#" class="hover:text-white transition opacity-50">Brush Cutters</a></li>
-                    <li><a href="#" class="hover:text-white transition opacity-50">Chain Saws</a></li>
-                </ul>
-            </div>
-            <!-- 电动工具 -->
-            <div>
-                <h4 class="text-[10px] font-black text-orange-500 uppercase tracking-widest mb-4">Power Tools</h4>
-                <ul class="space-y-3 text-[11px] text-zinc-500 uppercase font-bold">
-                    <li><a href="#" class="hover:text-white transition">Lithium Tools</a></li>
-                </ul>
-            </div>
+        <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-zinc-300">
+            <a href="index.html" class="hover:text-white transition">Home</a>
+            <a href="About.html" class="hover:text-white transition">Company</a>
+            <a href="Global-Catalog.html" class="text-orange-500 transition">Products</a>
         </div>
-    </aside>
+        <a href="https://wa.me/8613561675079" class="bg-orange-600 text-white text-[10px] font-black uppercase px-6 py-2 rounded">B2B INQUIRY</a>
+    </nav>
 
-    <!-- 右侧：产品详情内容 (这里放原有的图片和参数代码) -->
-    <div class="flex-grow order-1 lg:order-2">
-        <!-- 原有的 <h1...>, <img...>, <div class="grid"...> 等代码 -->
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
+        <!-- 左侧分类侧边栏 -->
+        <aside class="w-full lg:w-72 flex-shrink-0">
+            <div class="sticky top-32 bg-zinc-900/50 p-8 border border-zinc-800 rounded-xl">
+                <h3 class="text-orange-500 font-black text-xs uppercase tracking-widest mb-8 italic">Equipment Menu</h3>
+                <ul class="space-y-6">
+                    <li>
+                        <a href="Cleaning-Tools.html" class="text-zinc-500 font-black text-xs uppercase block mb-3 hover:text-white">Cleaning Tools</a>
+                    </li>
+                    <li>
+                        <a href="Garden-Tools.html" class="text-white font-black text-xs uppercase block mb-3">Garden Tools</a>
+                        <ul class="pl-4 space-y-2 border-l border-orange-600/30 text-[10px] font-bold text-zinc-400">
+                            <li><a href="Mower-Details.html" class="text-orange-500">RC Mowers</a></li>
+                            <li><span class="opacity-30">Brush Cutters</span></li>
+                            <li><span class="opacity-30">Chain Saws</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="Power-Tools.html" class="text-zinc-500 font-black text-xs uppercase block hover:text-white">Power Tools</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- 右侧产品深度详情 -->
+        <main class="flex-grow">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 图片库 -->
+                <div class="space-y-4">
+                    <div class="bg-zinc-950 rounded-2xl overflow-hidden border border-white/5 cursor-zoom-in relative" onclick="openLightbox()">
+                        <img id="mainDisplay" src="images/mowers/mower-1.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1592910129881-892bbe239cc0?q=80&w=800'">
+                    </div>
+                    <div class="grid grid-cols-5 gap-2">
+                        <img src="images/mowers/mower-1.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
+                        <img src="images/mowers/mower-2.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover" onerror="this.src='https://via.placeholder.com/200?text=View+2'">
+                        <img src="images/mowers/mower-3.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover" onerror="this.src='https://via.placeholder.com/200?text=View+3'">
+                        <img src="images/mowers/mower-4.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover" onerror="this.src='https://via.placeholder.com/200?text=View+4'">
+                        <img src="images/mowers/mower-5.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover" onerror="this.src='https://via.placeholder.com/200?text=View+5'">
+                    </div>
+                </div>
+
+                <!-- 核心介绍 -->
+                <div class="flex flex-col">
+                    <h1 class="text-4xl font-black uppercase italic tracking-tighter mb-4">RC Master <span class="text-orange-500">Hybrid</span></h1>
+                    <p class="text-zinc-500 text-xs uppercase tracking-[0.3em] mb-8 font-bold">Unmanned All-Terrain Mowing Solution</p>
+                    
+                    <div class="space-y-2 mb-10">
+                        <div class="flex justify-between tech-row"><span>Power System</span><span class="font-bold">Gas-Electric Hybrid</span></div>
+                        <div class="flex justify-between tech-row"><span>Engine</span><span class="font-bold">196CC 4-Stroke</span></div>
+                        <div class="flex justify-between tech-row"><span>Control Range</span><span class="font-bold text-green-500">800 Meters</span></div>
+                        <div class="flex justify-between tech-row"><span>Cutting Width</span><span class="font-bold">56cm / 22in</span></div>
+                        <div class="flex justify-between tech-row"><span>Efficiency</span><span class="font-bold">2000 m²/h</span></div>
+                    </div>
+
+                    <a href="https://wa.me/8613561675079?text=Inquiry for RC Mower Specs" class="bg-white text-black py-4 text-center font-black uppercase text-[10px] tracking-widest rounded-full hover:bg-orange-600 hover:text-white transition-all">WhatsApp Order</a>
+                </div>
+            </div>
+
+            <!-- 详细规格大表 -->
+            <div class="mt-20 border-t border-white/10 pt-16">
+                <h2 class="text-2xl font-black uppercase italic mb-10">Full Specifications</h2>
+                <div class="grid md:grid-cols-2 gap-x-20 text-[11px] uppercase tracking-wide">
+                    <div class="space-y-1">
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Walking Speed</span><span class="text-white">0 - 2 m/s</span></div>
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Battery</span><span class="text-white">12V / 40Ah</span></div>
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Drive Mode</span><span class="text-white">Tracked Crawler</span></div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Dimensions</span><span class="text-white">105 * 100 * 64 cm</span></div>
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Net Weight</span><span class="text-white">150 Kg</span></div>
+                        <div class="flex justify-between tech-row text-zinc-500"><span>Special features</span><span class="text-white">Front LEDs / Generator</span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
-</main>
+    <!-- Lightbox 放大效果 -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')">
+        <img id="lbImg" src="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <script>
+        function swap(s){ document.getElementById('mainDisplay').src = s; }
+        function openLightbox(){ 
+            document.getElementById('lbImg').src = document.getElementById('mainDisplay').src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
