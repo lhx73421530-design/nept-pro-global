@@ -40,14 +40,15 @@
                     <div class="bg-zinc-950 rounded-2xl overflow-hidden border border-white/5 cursor-zoom-in relative" onclick="openLightbox()">
                         <img id="mainDisplay" src="images/sweepers/sweeper-1.jpg" class="w-full h-full object-cover transition duration-500" onerror="this.src='https://images.unsplash.com/photo-1621905235277-24846467026a?q=80&w=800'">
                     </div>
-                    <div class="grid grid-cols-5 gap-2">
-                        <img src="images/sweepers/sweeper-1.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
-                        <img src="images/sweepers/sweeper-2.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
-                        <img src="images/sweepers/sweeper-3.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
-                        <img src="images/sweepers/sweeper-4.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
-                        <img src="images/sweepers/sweeper-5.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
-                    </div>
-                </div>
+                    <!-- 修改缩略图部分如下 -->
+<div class="grid grid-cols-4 gap-2"> <!-- 5列改4列 -->
+    <img src="images/sweepers/sweeper-1.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
+    <img src="images/sweepers/sweeper-2.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
+    <img src="images/sweepers/sweeper-3.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
+    <img src="images/sweepers/sweeper-4.jpg" onclick="swap(this.src)" class="aspect-square bg-zinc-900 rounded border border-white/10 cursor-pointer object-cover">
+</div>
+
+<!-- 脚本逻辑同上，请务必在 </body> 前粘贴上面的 <script> 部分 -->
 
                 <div class="flex flex-col">
                     <h1 class="text-5xl font-black uppercase italic tracking-tighter mb-4">Giant <span class="text-orange-500">2200</span></h1>
