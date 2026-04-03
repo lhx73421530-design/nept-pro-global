@@ -1,21 +1,24 @@
 backend:
   name: github
-  repo: lhx73421530-design/nept-pro-global  # 比如 Leo/nept-pro-global
+  repo: lhx73421530-design/nept-pro-global  # <--- 这里必须改对！
   branch: main
   base_url: https://api.netlify.com
   auth_endpoint: /auth
 
+# 后台上传图片存放的位置
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "products"
-    label: "Product List (产品管理)"
+    label: "Product List (发布产品)"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Price ($)", name: "price", widget: "string" }
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
       - { label: "Main Image", name: "image", widget: "image" }
-      - { label: "Specs", name: "body", widget: "markdown" }
+      - { label: "Detailed Specs", name: "body", widget: "markdown" }
