@@ -1,48 +1,23 @@
 backend:
   name: github
-  repo: 你的GitHub用户名/nept-pro-global  # ！！请务必改成你真实的仓库路径，例如 Leo/nept-pro-global ！！
+  repo: lhx73421530-design/nept-pro-global  # 例如 Leo/nept-pro-global
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: /auth
 
-media_folder: "static/images/uploads" # 后台上传的图存在这里
+media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # 1. 产品发布系统
   - name: "products"
-    label: "Product Management (发布新产品)"
+    label: "Product Management (发布产品)"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Product Name (产品名称)", name: "title", widget: "string" }
-      - { label: "Model Number (型号)", name: "model", widget: "string" }
-      - { label: "Main Category (主类目)", name: "main_category", widget: "select", options: ["Cleaning Tools", "Garden Tools", "Power Tools"] }
-      - { label: "Sub Category (细分类目)", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
+      - { label: "Product Name", name: "title", widget: "string" }
       - { label: "Price ($)", name: "price", widget: "string" }
-      - { label: "Main Hero Image (主图)", name: "image", widget: "image" }
-      - { label: "Product Gallery (图库 - 最多5张)", name: "gallery", widget: "list", field: {label: "Image", name: "img", widget: "image"} }
-      - { label: "Video Upload (视频链接/文件)", name: "video", widget: "file", required: false }
-      - { label: "Product Description (描述)", name: "description", widget: "text" }
-      
-      # 以下是硬核参数表（填空式）
-      - label: "Specifications (技术参数)"
-        name: "specs"
-        widget: "object"
-        fields:
-          - { label: "Spec 1 Name (参数名1)", name: "s1_name", widget: "string", default: "Dimensions" }
-          - { label: "Spec 1 Value (参数值1)", name: "s1_val", widget: "string" }
-          - { label: "Spec 2 Name (参数名2)", name: "s2_name", widget: "string", default: "Weight" }
-          - { label: "Spec 2 Value (参数值2)", name: "s2_val", widget: "string" }
-          - { label: "Spec 3 Name (参数名3)", name: "s3_name", widget: "string", default: "Efficiency" }
-          - { label: "Spec 3 Value (参数值3)", name: "s3_val", widget: "string" }
-          - { label: "Spec 4 Name (参数名4)", name: "s4_name", widget: "string", default: "Special Feature" }
-          - { label: "Spec 4 Value (参数值4)", name: "s4_val", widget: "string" }
-
-  # 2. 类目管理系统 (允许你后期随意添加新类目)
-  - name: "categories"
-    label: "Category Manager (后期添加新类目)"
-    folder: "content/categories"
-    create: true
-    fields:
-      - { label: "Category Name", name: "title", widget: "string" }
-      - { label: "Description", name: "desc", widget: "text" }
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
+      - { label: "Main Image", name: "image", widget: "image" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
