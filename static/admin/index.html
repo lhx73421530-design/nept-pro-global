@@ -2,24 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CNNEPT PRO - Content Manager</title>
-  <!-- 必须在最前面加载这个脚本 -->
+  <title>CNNEPT PRO - ADMIN</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <script>
-    // ！！！这里填入你真实的 Netlify 网址（比如 https://xyz.netlify.app）！！！
-    const NETLIFY_SITE_URL = "https://你的站点名字.netlify.app";
+    // 填入你 Netlify 的那个二级域名
+    const NETLIFY_URL = "https://https://papaya-phoenix-ac598e.netlify.app/"; 
+    
+    // 强制初始化地址
+    window.netlifyIdentity.seturl(NETLIFY_URL);
 
-    // 强行修正本地存储中的 API 指向
-    if (window.location.hostname.includes("pro.cnnept.com")) {
-      window.netlifyIdentity.on('init', () => {
-        window.netlifyIdentity.seturl(NETLIFY_SITE_URL);
-      });
-    }
+    window.netlifyIdentity.on('login', () => {
+      window.location.reload();
+    });
   </script>
-  <!-- 加载 Decap CMS 引擎 -->
   <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
 </body>
 </html>
