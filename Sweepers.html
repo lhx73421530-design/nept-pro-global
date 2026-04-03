@@ -65,33 +65,18 @@
         </aside>
 
         <!-- 右侧内容：所有产品大橱窗 -->
-        <main class="flex-grow">
-            <header class="mb-12 border-b border-zinc-900 pb-8">
-                <h1 class="text-4xl font-black uppercase italic tracking-tighter">Global <span class="text-orange-500">Catalog</span></h1>
-            </header>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 产品：RC Mower -->
-                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl hover:border-orange-500 transition group">
-                    <div class="aspect-square bg-black rounded-lg mb-4 overflow-hidden">
-                        <img src="images/mowers/hero.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1592910129881-892bbe239cc0?q=80&w=400'">
-                    </div>
-                    <h3 class="text-sm font-black uppercase italic mb-1">RC Master Hybrid</h3>
-                    <p class="text-[9px] text-zinc-500 mb-4 uppercase">800M Range / 45° Climbing</p>
-                    <a href="Mower-Details.html" class="block text-center bg-white text-black py-2 text-[9px] font-black uppercase rounded hover:bg-orange-600 hover:text-white transition">View Specs</a>
-                </div>
-
-                <!-- 产品：Sweeper -->
-                <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl hover:border-blue-500 transition group">
-                    <div class="aspect-square bg-black rounded-lg mb-4 overflow-hidden">
-                        <img src="images/sweepers/hero.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://images.unsplash.com/photo-1621905235277-24846467026a?q=80&w=400'">
-                    </div>
-                    <h3 class="text-sm font-black uppercase italic mb-1">Giant 2200 Sweeper</h3>
-                    <p class="text-[9px] text-zinc-500 mb-4 uppercase">17,000 m²/h / 300L Water</p>
-                    <a href="Sweeper-Details.html" class="block text-center bg-white text-black py-2 text-[9px] font-black uppercase rounded hover:bg-blue-600 hover:text-white transition">View Specs</a>
-                </div>
-            </div>
-        </main>
+     <!-- 代码框架同 Global-Catalog.html，但 main 部分如下 -->
+<main class="flex-grow">
+    <h1 class="text-3xl font-black uppercase italic mb-8 border-l-4 border-orange-500 pl-4">Industrial Sweepers</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- 扫地车卡片 -->
+        <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl">
+            <img src="images/sweepers/sweeper-1.jpg" class="aspect-video object-cover rounded-lg mb-4">
+            <h3 class="font-black uppercase italic">Giant 2200</h3>
+            <a href="Sweeper-Details.html" class="block mt-4 text-center bg-white text-black py-2 text-[10px] font-black uppercase">View Details</a>
+        </div>
+    </div>
+</main>
     </div>
 </body>
 </html>
