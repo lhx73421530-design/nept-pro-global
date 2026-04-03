@@ -1,15 +1,14 @@
 backend:
   name: git-gateway
-  repo: lhx73421530-design/nept-pro-global # 确认这里改成了你的真实路径
+  repo: lhx73421530-design/nept-pro-global
   branch: main
 
-# 图片上传设置
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "products"
-    label: "Product Management (发布产品)"
+    label: "Product List (发布产品)"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
