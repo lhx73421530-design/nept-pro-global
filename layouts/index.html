@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ .Title }}</title>
+    <title>CNNEPT PRO | Official Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>body { background:#000; color:#fff; font-family: sans-serif; } .snap-container { scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll; }</style>
 </head>
-<body>
-    <nav class="fixed top-0 w-full z-[100] bg-black/80 border-b border-orange-600/50 p-6 flex justify-between">
-        <div class="text-xl font-black tracking-widest">CNNEPT PRO</div>
-        <div class="space-x-6 text-xs uppercase font-bold">
-            <a href="/admin/">Admin Dashboard (管理后台)</a>
-        </div>
+<body class="bg-black text-white">
+    <nav class="p-10 border-b border-orange-600/30 flex justify-between">
+        <div class="text-xl font-black">CNNEPT PRO</div>
+        <a href="https://wa.me/8613561675079" class="text-orange-500 font-bold uppercase">B2B Inquiry</a>
     </nav>
-
-    <div class="snap-container">
-        <section class="h-screen flex flex-col items-center justify-center bg-zinc-900">
-            <h1 class="text-7xl font-black italic uppercase">Automation Active</h1>
-            <p class="mt-4 text-orange-500 tracking-[0.5em]">LATEST INDUSTRIAL SOLUTIONS</p>
-            <!-- 自动循环显示你在后台发布的所有产品 -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-6xl w-full px-10">
-                {{ range (where .Site.RegularPages "Section" "products") }}
-                <a href="{{ .RelPermalink }}" class="group bg-zinc-800 p-4 rounded-xl border border-white/5 hover:border-orange-500 transition">
-                    <img src="{{ .Params.image }}" class="aspect-square object-cover rounded-lg mb-4">
-                    <h3 class="font-bold uppercase text-xs">{{ .Title }}</h3>
-                    <p class="text-orange-500 mt-2 font-black">${{ .Params.price }}</p>
-                </a>
-                {{ end }}
-            </div>
-        </section>
-    </div>
+    <main class="h-screen flex flex-col items-center justify-center text-center">
+        <h1 class="text-7xl font-black italic uppercase">Industrial Power</h1>
+        <p class="mt-6 text-zinc-500 tracking-[0.5em]">LATEST SOLUTIONS LIVE</p>
+        
+        <!-- 自动显示后台发布的产品 -->
+        <div class="grid grid-cols-2 gap-10 mt-20">
+            {{ range (where .Site.RegularPages "Section" "products") }}
+            <a href="{{ .RelPermalink }}" class="border border-zinc-800 p-6 rounded-2xl">
+                <img src="{{ .Params.image }}" class="w-40 h-40 object-cover mb-4">
+                <h3 class="font-bold">{{ .Title }}</h3>
+                <p class="text-orange-500">${{ .Params.price }}</p>
+            </a>
+            {{ end }}
+        </div>
+    </main>
 </body>
 </html>
