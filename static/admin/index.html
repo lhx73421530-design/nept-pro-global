@@ -3,11 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>CNNEPT PRO - Content Manager</title>
+  <title>CNNEPT PRO - Admin</title>
+  <!-- 引入 Netlify 身份验证脚本 -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- 我们把脚本放在 body 里面，确保 appendChild 不会找不到对象 -->
+  <script>
+    // ！！！极其重要：这里必须填入你刚才在 Netlify 复制的那个 .netlify.app 地址 ！！！
+    const netlifySiteURL = "https://luminous-madeleine-734ec3.netlify.app"; 
+
+    if (window.location.hostname !== new URL(netlifySiteURL).hostname) {
+        window.netlifyIdentity.seturl(netlifySiteURL);
+    }
+  </script>
+  <!-- 引入后台主脚本 -->
   <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
 </body>
 </html>

@@ -91,5 +91,17 @@
         <span class="text-[8px] border-l border-white/20 pl-8 tracking-[0.4em] uppercase text-zinc-500">Verified Global Supplier</span>
     </div>
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
