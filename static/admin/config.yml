@@ -1,5 +1,9 @@
 backend:
   name: git-gateway
+  # ！！！这里填入你 Netlify 的完整二级域名（必须带 https://） ！！！
+  # 示例：https://shiny-glitter-12345.netlify.app
+  identity_url: "https://comforting-pie-8af589.netlify.app/.netlify/identity""
+  gateway_url: "https://comforting-pie-8af589.netlify.app/.netlify/git"
   repo: lhx73421530-design/nept-pro-global
   branch: main
 
@@ -8,7 +12,7 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "products"
-    label: "Product List (发布产品)"
+    label: "Product Management (发布产品)"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
