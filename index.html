@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNNEPT PRO | Future of Industrial Machinery</title>
-    <!-- 引入核心引擎 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; margin: 0; }
-        /* 特斯拉式的全屏滚动效果 */
         .snap-container { scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll; scroll-behavior: smooth; }
         section { scroll-snap-align: start; height: 100vh; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 120px 20px 80px 20px; }
         .bg-media { position: absolute; inset: 0; z-index: -1; }
@@ -18,24 +15,18 @@
         .glass-btn { backdrop-filter: blur(15px); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); transition: 0.3s; }
         .glass-btn:hover { background: #fff; color: #000; }
         .snap-container::-webkit-scrollbar { display: none; }
-        /* 支付图标官方配色 */
-        .color-paypal { color: #003087 !important; }
-        .color-visa { color: #1a1f71 !important; }
-        .color-mastercard { color: #eb001b !important; }
+        .color-paypal { color: #003087; } .color-visa { color: #1a1f71; } .color-mastercard { color: #eb001b; }
     </style>
 </head>
 <body>
 
-    <!-- 1. 统一导航栏 (实体背景/居中/Logo跳转/手机菜单) -->
+    <!-- 1. 统一导航栏 (带实体背景颜色) -->
     <nav class="fixed top-0 w-full z-[100] bg-[#0a0a0a] border-b border-orange-600/50 px-6 md:px-10 py-4 flex justify-between items-center">
-        <!-- 左侧：Logo + 品牌名 (点击返回主页) -->
-        <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition min-w-[200px]">
+        <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition">
             <img src="images/logo.png" alt="Logo" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
             <div class="text-xl font-black tracking-[0.3em] uppercase text-white">CNNEPT <span class="font-light text-orange-500">PRO</span></div>
         </a>
-
-        <!-- 中间：电脑端菜单 -->
-        <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-zinc-300 md:absolute md:left-1/2 md:-translate-x-1/2">
+        <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest text-zinc-300">
             <a href="index.html" class="text-white border-b border-orange-500 pb-1">Home</a>
             <a href="About.html" class="hover:text-white transition">Company</a>
             <div class="relative group">
@@ -47,47 +38,43 @@
                 </div>
             </div>
         </div>
-
-        <!-- 右侧：手机端控制和询盘 -->
         <div class="flex items-center space-x-4">
             <a href="https://wa.me/8613561675079" class="bg-orange-600 text-white text-[10px] font-black uppercase px-5 py-2 rounded italic">Inquiry</a>
             <button onclick="toggleMobileMenu()" class="lg:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
         </div>
-
-        <!-- 手机端全屏菜单 -->
-        <div id="mobileMenu" class="hidden fixed inset-0 bg-black/98 z-[110] flex flex-col items-center justify-center space-y-10 text-white font-bold uppercase tracking-widest text-lg">
-            <button onclick="toggleMobileMenu()" class="absolute top-8 right-10 text-4xl">&times;</button>
-            <a href="index.html" onclick="toggleMobileMenu()">Home</a>
-            <a href="About.html" onclick="toggleMobileMenu()">Company</a>
-            <a href="Global-Catalog.html" onclick="toggleMobileMenu()">Products</a>
-            <a href="https://wa.me/8613561675079" class="text-orange-500">Contact Specialist</a>
-        </div>
     </nav>
+
+    <!-- 手机端全屏菜单 -->
+    <div id="mobileMenu" class="hidden fixed inset-0 bg-black/98 z-[110] flex flex-col items-center justify-center space-y-10 text-white font-bold uppercase tracking-widest text-lg">
+        <button onclick="toggleMobileMenu()" class="absolute top-8 right-10 text-4xl">&times;</button>
+        <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+        <a href="About.html" onclick="toggleMobileMenu()">Company</a>
+        <a href="Global-Catalog.html" onclick="toggleMobileMenu()">Products</a>
+        <a href="https://wa.me/8613561675079" class="text-orange-500">Contact Us</a>
+    </div>
 
     <div class="snap-container">
         
-        <!-- 第一屏：官宣屏 (Tesla风格) -->
+        <!-- 第一屏：Pioneering 英雄屏 -->
         <section id="hero">
-            <div class="bg-media">
-                <img src="images/mowers/hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070'">
-            </div>
+            <div class="bg-media"><img src="images/mowers/hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070'"></div>
             <div class="text-center">
                 <h1 class="text-6xl md:text-9xl font-black mb-4 uppercase tracking-tighter italic">Pioneering</h1>
                 <p class="text-[12px] tracking-[0.6em] font-light uppercase opacity-70">Industrial Intelligence & Power</p>
             </div>
             <div class="flex flex-col md:flex-row gap-6 w-full max-w-md">
-                <a href="Global-Catalog.html" class="bg-blue-600 px-12 py-4 font-black uppercase italic hover:scale-105 transition-all text-center text-xs tracking-widest">
-                    UPGRADE YOUR DRIFT
+                <a href="Global-Catalog.html" class="bg-white text-black px-12 py-4 font-black uppercase italic hover:bg-orange-600 hover:text-white transition-all text-center text-[10px] tracking-widest">
+                    EXPLORE FLEET
                 </a>
             </div>
         </section>
 
-        <!-- 第二屏：遥控割草机 (Hardcode 数据) -->
+        <!-- 第二屏：遥控割草机 (修正图片路径) -->
         <section id="mower">
-            <div class="bg-media"><img src="images/mowers/mower-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1592910129881-892bbe239cc0?q=80&w=2070'"></div>
+            <div class="bg-media"><img src="images/mowers/hero.jpg"></div>
             <div class="text-center">
-                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">RC Master <span class="text-orange-500">Hybrid</span></h2>
-                <p class="text-[10px] tracking-[0.5em] font-light uppercase opacity-70">Unmanned All-Terrain Mowing Solution</p>
+                <h2 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">RC Master <span class="text-orange-500">Hybrid</span></h2>
+                <p class="text-[10px] tracking-[0.5em] font-light uppercase opacity-70">Unmanned All-Terrain Mowing System</p>
             </div>
             <div class="w-full max-w-4xl grid grid-cols-3 gap-4 mb-10 text-center uppercase italic">
                 <div><h3 class="text-2xl md:text-4xl font-bold">800M</h3><p class="text-[9px] text-gray-500 tracking-widest mt-2">Remote Range</p></div>
@@ -95,16 +82,16 @@
                 <div><h3 class="text-2xl md:text-4xl font-bold">Hybrid</h3><p class="text-[9px] text-gray-500 tracking-widest mt-2">Drive System</p></div>
             </div>
             <div class="flex flex-col md:flex-row gap-4 w-full max-w-md">
-                <a href="Mower-Details.html" class="bg-white text-black flex-1 py-4 text-center text-[10px] font-black uppercase rounded">Specifications</a>
+                <a href="Mower-Details.html" class="bg-white text-black flex-1 py-4 text-center text-[10px] font-black uppercase rounded">View Specs</a>
                 <a href="https://wa.me/8613561675079" class="glass-btn flex-1 py-4 text-center text-[10px] font-black uppercase rounded">WhatsApp Order</a>
             </div>
         </section>
 
-        <!-- 第三屏：工业扫地车 (Hardcode 数据) -->
+        <!-- 第三屏：工业扫地车 -->
         <section id="sweeper">
             <div class="bg-media"><img src="images/sweepers/sweeper-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1621905235277-24846467026a?q=80&w=2070'"></div>
             <div class="text-center">
-                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">Giant <span class="text-orange-500">2200</span></h2>
+                <h2 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tighter italic">Giant <span class="text-orange-500">2200</span></h2>
                 <p class="text-[10px] tracking-[0.5em] font-light uppercase opacity-70">17,000 m²/h Efficiency • Zero Dust Technology</p>
             </div>
             <div class="w-full max-w-5xl grid grid-cols-4 gap-4 mb-10 text-center px-4 uppercase italic">
@@ -114,19 +101,18 @@
                 <div><h3 class="text-xl md:text-3xl font-black text-red-500">3X 8KG</h3><p class="text-[8px] text-gray-400 mt-1">Safety</p></div>
             </div>
             <div class="flex flex-col md:flex-row gap-4 w-full max-w-md">
-                <a href="Sweeper-Details.html" class="bg-white text-black flex-1 py-4 text-center text-[10px] font-black uppercase rounded">View Specifications</a>
-                <a href="https://wa.me/8613561675079" class="glass-btn flex-1 py-4 text-center text-[10px] font-black uppercase rounded">Request Quote</a>
+                <a href="Sweeper-Details.html" class="bg-white text-black flex-1 py-4 text-center text-[10px] font-black uppercase rounded">Full Specifications</a>
+                <a href="https://wa.me/8613561675079" class="glass-btn flex-1 py-4 text-center text-[10px] font-black uppercase rounded">B2B Quote</a>
             </div>
         </section>
 
     </div>
 
-    <!-- 底部彩色信任标识 (固底) -->
+    <!-- 底部彩色信任标识 -->
     <div class="fixed bottom-6 w-full flex justify-center items-center space-x-8 opacity-50 hover:opacity-100 transition duration-1000">
         <i class="fab fa-cc-paypal text-2xl color-paypal"></i>
         <i class="fab fa-cc-visa text-2xl color-visa"></i>
         <i class="fab fa-cc-mastercard text-2xl color-mastercard"></i>
-        <span class="text-[8px] border-l border-white/20 pl-8 tracking-[0.4em] uppercase text-zinc-500">Verified Global Supplier</span>
     </div>
 
     <script>
