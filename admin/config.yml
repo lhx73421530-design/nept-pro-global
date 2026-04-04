@@ -1,19 +1,21 @@
 backend:
   name: git-gateway
-  repo: lhx73421530-design/nept-pro-global  # <--- 换成你的 GitHub 名字/仓库名
+  repo: lhx73421530-design/nept-pro-global  # <--- 必须是你的 GitHub 名字/仓库名
   branch: main
 
+# 图片存放路径（后台传图会直接进这里）
 media_folder: "images"
 public_folder: "images"
 
 collections:
   - name: "products"
-    label: "Product Management (发布产品)"
+    label: "Product Management (发布新产品)"
     folder: "content/products"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Price", name: "price", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["Sweepers", "Mowers", "Tools"] }
+      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws"] }
       - { label: "Main Image", name: "image", widget: "image" }
-      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
