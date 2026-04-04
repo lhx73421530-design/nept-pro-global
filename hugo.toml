@@ -1,10 +1,9 @@
 baseURL = 'https://pro.cnnept.com/'
 languageCode = 'en-us'
 title = 'CNNEPT PRO'
+
+# 告诉 Hugo 我们不使用外部主题，而是使用自己的 layouts 文件夹
 theme = []
 
 [publishDir]
   publishDir = "public"
-
-[params]
-  whatsapp = "8613561675079"
