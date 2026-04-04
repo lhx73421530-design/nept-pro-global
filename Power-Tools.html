@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Catalog | CNNEPT PRO Industrial Equipment</title>
+    <title>Cleaning Tools Collection | CNNEPT PRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; }</style>
 </head>
-<body class="pt-20">
-    <!-- 统一导航栏 -->
+<body class="pt-24">
+     <!-- 统一导航栏 -->
     <!-- 响应式导航栏 - 支持手机端/Logo跳转 -->
 <nav class="fixed top-0 w-full z-[100] bg-[#0a0a0a] border-b border-orange-600/50 px-6 md:px-10 py-4 flex justify-between items-center">
     
@@ -67,7 +66,7 @@
     }
 </script>
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row gap-12">
-        <!-- 左侧专业分类栏 -->
+        <!-- 左侧菜单栏 -->
 <!-- 统一侧边栏开始 -->
 <aside class="w-full lg:w-72 flex-shrink-0">
     <div class="sticky top-32 bg-zinc-900/50 p-8 border border-zinc-800 rounded-xl">
@@ -99,7 +98,7 @@
             </li>
 
             <!-- 3. Power Tools -->
-           <li>
+            <li>
     <a href="Power-Tools.html" class="text-white font-black text-sm uppercase block mb-4 hover:text-orange-500 transition">
         <i class="fas fa-bolt mr-2"></i> Power Tools
     </a>
@@ -121,17 +120,55 @@
 </aside>
 <!-- 统一侧边栏结束 -->
 
-        <!-- 右侧内容：所有产品大橱窗 -->
-        <main class="flex-grow">
-            <header class="mb-12 border-b border-zinc-900 pb-8">
-                <h1 class="text-4xl font-black uppercase italic tracking-tighter">Global <span class="text-orange-500">Catalog</span></h1>
-            </header>
+        <!-- 右侧：展示“所有”电动工具 -->
+<!-- 右侧产品橱窗展示区域 -->
+<main class="flex-grow">
+    <!-- 统一的大标题样式 (橙色左边框/斜体大写) -->
+    <header class="mb-12 border-b border-zinc-900 pb-8">
+        <h1 class="text-3xl font-black uppercase italic tracking-tighter">
+            Power <span class="text-orange-500">Tools</span>
+        </h1>
+        <p class="text-zinc-500 text-xs mt-4 uppercase tracking-[0.3em]">
+            Professional Lithium-Ion Series & Cordless Solutions
+        </p>
+    </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 产品：RC Mower -->
-               
+    <!-- 统一的网格布局 (1列变2列) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- 产品块：Lithium-Ion Series -->
+        <div class="group bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-orange-600 transition duration-500 flex flex-col">
+            <!-- 图片容器：固定比例 -->
+            <div class="aspect-video bg-black rounded-lg mb-6 overflow-hidden flex items-center justify-center relative">
+                <!-- 占位图：可以换成你以后锂电工具的全家福 -->
+                <i class="fas fa-bolt text-5xl text-zinc-800 group-hover:text-orange-500 transition duration-700"></i>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
-        </main>
+
+            <!-- 文字描述 -->
+            <h3 class="text-xl font-black uppercase italic mb-2">Lithium-Ion Series</h3>
+            <p class="text-[10px] text-zinc-500 mb-6 uppercase tracking-widest font-bold">
+                High-Torque / Brushless Technology / Universal Battery Platform
+            </p>
+
+            <!-- 按钮：跳转到细分页面 -->
+            <div class="mt-auto">
+                <a href="Lithium-Ion-Series.html" class="block w-full bg-white text-black text-center py-3 text-[10px] font-black uppercase rounded hover:bg-orange-600 hover:text-white transition-all">
+                    View Full Series
+                </a>
+            </div>
+        </div>
+
+        <!-- 占位块：以后添加新分类 (如焊接设备) -->
+        <div class="bg-zinc-900/30 border border-zinc-800 border-dashed p-6 rounded-2xl flex flex-col items-center justify-center text-center opacity-40">
+            <i class="fas fa-plus-circle text-2xl text-zinc-700 mb-4"></i>
+            <p class="text-zinc-600 italic tracking-widest uppercase text-[9px]">
+                New Categories <br> Coming Soon
+            </p>
+        </div>
+
+    </div>
+</main>
     </div>
 </body>
 </html>
