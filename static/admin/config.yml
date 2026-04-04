@@ -1,23 +1,15 @@
 backend:
   name: git-gateway
-  identity_url: "https://luminous-madeleine-734ec3.netlify.app/.netlify/identity"
-  gateway_url: "https://luminous-madeleine-734ec3.netlify.app/.netlify/git"
-  repo: lhx73421530-design/nept-pro-global
   branch: main
-
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
 collections:
   - name: "products"
     label: "Product Management (发布产品)"
     folder: "content/products"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Product Name", name: "title", widget: "string" }
-      - { label: "Price ($)", name: "price", widget: "string" }
-      - { label: "Model Number", name: "model", widget: "string" }
-      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
-      - { label: "Main Image", name: "image", widget: "image" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
