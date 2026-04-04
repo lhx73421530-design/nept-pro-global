@@ -122,7 +122,22 @@
 
         <!-- 右侧：展示“所有”清洁工具 -->
         <main class="flex-grow">
-    <h1 class="text-3xl font-black uppercase italic mb-10 border-l-4 border-green-500 pl-4">Garden Tools <span class="text-zinc-500 font-light text-sm italic">Showing All</span></h1>
+    <header class="mb-16 border-b border-zinc-900 pb-12">
+        <div class="flex items-center space-x-4 mb-4">
+            <!-- 对应类目的小图标 -->
+            <div class="w-12 h-12 bg-zinc-900 border border-orange-600/30 rounded-lg flex items-center justify-center text-orange-500">
+                <i class="fas fa-bolt text-xl"></i> <!-- 这里的图标根据类目换：fa-bolt, fa-broom, fa-leaf -->
+            </div>
+            <span class="text-zinc-600 text-[10px] font-black uppercase tracking-[0.5em]">Industrial Intelligence</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">
+            Garden Tools <span class="text-orange-500">Fleet</span>
+        </h1>
+        <p class="text-zinc-500 text-sm mt-6 max-w-xl font-light leading-relaxed">
+            High-performance engineering designed for maximum efficiency. 
+        </p>
+    </header>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- 割草机 -->
         <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-green-600 transition">

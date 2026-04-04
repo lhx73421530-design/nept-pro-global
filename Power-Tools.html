@@ -124,12 +124,20 @@
 <!-- 右侧产品橱窗展示区域 -->
 <main class="flex-grow">
     <!-- 统一的大标题样式 (橙色左边框/斜体大写) -->
-    <header class="mb-12 border-b border-zinc-900 pb-8">
-        <h1 class="text-3xl font-black uppercase italic tracking-tighter">
-            Power <span class="text-orange-500">Tools</span>
+    <header class="mb-16 border-b border-zinc-900 pb-12">
+        <div class="flex items-center space-x-4 mb-4">
+            <!-- 对应类目的小图标 -->
+            <div class="w-12 h-12 bg-zinc-900 border border-orange-600/30 rounded-lg flex items-center justify-center text-orange-500">
+                <i class="fas fa-bolt text-xl"></i> <!-- 这里的图标根据类目换：fa-bolt, fa-broom, fa-leaf -->
+            </div>
+            <span class="text-zinc-600 text-[10px] font-black uppercase tracking-[0.5em]">Industrial Intelligence</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-none">
+            Power Tools <span class="text-orange-500">Fleet</span>
         </h1>
-        <p class="text-zinc-500 text-xs mt-4 uppercase tracking-[0.3em]">
-            Professional Lithium-Ion Series & Cordless Solutions
+        <p class="text-zinc-500 text-sm mt-6 max-w-xl font-light leading-relaxed">
+            High-performance engineering designed for maximum efficiency. 
         </p>
     </header>
 
