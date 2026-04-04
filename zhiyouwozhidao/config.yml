@@ -1,9 +1,11 @@
 backend:
   name: git-gateway
-  repo: lhx73421530-design/nept-pro-global  # <--- 必须是你的 GitHub 名字/仓库名
+  # 明确指向 Netlify 的网关地址，解决 "Unable to access identity settings"
+  identity_url: "https://magenta-cucurucho-59a5ea.netlify.app/.netlify/identity"
+  gateway_url: "https://magenta-cucurucho-59a5ea.netlify.app/.netlify/git"
+  repo: lhx73421530-design/nept-pro-global  # 已检索您的用户名和仓库名
   branch: main
 
-# 图片存放路径（后台传图会直接进这里）
 media_folder: "images"
 public_folder: "images"
 
@@ -14,10 +16,8 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Main Category", name: "main_category", widget: "select", options: ["Cleaning Tools", "Garden Tools", "Power Tools"] }
-      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
       - { label: "Product Name", name: "title", widget: "string" }
       - { label: "Model Number", name: "model", widget: "string" }
-      - { label: "Price (Optional)", name: "price", widget: "string", required: false } # 设为非必填
+      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
       - { label: "Main Image", name: "image", widget: "image" }
-      - { label: "Detailed Description", name: "body", widget: "markdown" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
