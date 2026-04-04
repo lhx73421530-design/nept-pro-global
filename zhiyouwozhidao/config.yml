@@ -9,13 +9,15 @@ public_folder: "images"
 
 collections:
   - name: "products"
-    label: "Product Management (发布新产品)"
+    label: "Product Management (发布产品)"
     folder: "content/products"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws"] }
+      - { label: "Main Category", name: "main_category", widget: "select", options: ["Cleaning Tools", "Garden Tools", "Power Tools"] }
+      - { label: "Sub Category", name: "sub_category", widget: "select", options: ["Ride-on Sweepers", "Floor Scrubbers", "RC Mowers", "Brush Cutters", "Chain Saws", "Lithium-Ion Series"] }
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Model Number", name: "model", widget: "string" }
+      - { label: "Price (Optional)", name: "price", widget: "string", required: false } # 设为非必填
       - { label: "Main Image", name: "image", widget: "image" }
-      - { label: "Body Content", name: "body", widget: "markdown" }
+      - { label: "Detailed Description", name: "body", widget: "markdown" }
