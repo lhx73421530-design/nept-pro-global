@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  # 明确指向 Netlify 的网关地址，解决 "Unable to access identity settings"
+  # 显式指定 API 路径，不让它在 Vercel 乱撞
   identity_url: "https://magenta-cucurucho-59a5ea.netlify.app/.netlify/identity"
   gateway_url: "https://magenta-cucurucho-59a5ea.netlify.app/.netlify/git"
-  repo: lhx73421530-design/nept-pro-global  # 已检索您的用户名和仓库名
+  repo: lhx73421530-design/nept-pro-global
   branch: main
 
 media_folder: "images"
@@ -11,10 +11,9 @@ public_folder: "images"
 
 collections:
   - name: "products"
-    label: "Product Management (发布产品)"
+    label: "Product Management"
     folder: "content/products"
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Product Name", name: "title", widget: "string" }
       - { label: "Model Number", name: "model", widget: "string" }
