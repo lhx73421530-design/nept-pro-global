@@ -1,6 +1,6 @@
 baseURL = 'https://pro.cnnept.com/'
 languageCode = 'en-us'
-title = 'CNNEPT PRO | Industrial Excellence'
+title = 'CNNEPT PRO'
 theme = []
 
 [publishDir]
